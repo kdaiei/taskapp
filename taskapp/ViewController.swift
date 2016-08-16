@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         categoryTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,9 +78,10 @@ class ViewController: UIViewController {
         //outFoucus()
     }
     
+    
+    
     func dismissKeyboard(){
         // キーボードを閉じる
-        print(">>>>dismissKeyboard kita")
         view.endEditing(true)
     }
     
@@ -118,16 +120,10 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    func outFoucus() {
-        print("outFoucus kita!")
-        categoryTextField.resignFirstResponder()
-    }
+
     
     // segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // 今フォーカスが当たっているテキストボックスからフォーカスを外す
-        //outFoucus()
         dismissKeyboard()
         let inputViewController:InputViewController = segue.destinationViewController as! InputViewController
         
