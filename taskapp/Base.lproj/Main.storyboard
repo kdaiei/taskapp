@@ -182,6 +182,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgV-hB-wam">
+                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="XCU-H5-Mrk">
                                 <rect key="frame" x="20" y="413" width="560" height="120"/>
                                 <constraints>
@@ -204,6 +210,7 @@
                             <constraint firstItem="mCK-cq-Tcd" firstAttribute="trailing" secondItem="du8-RI-0TI" secondAttribute="trailingMargin" id="Bt0-1V-6nC"/>
                             <constraint firstItem="XCU-H5-Mrk" firstAttribute="trailing" secondItem="du8-RI-0TI" secondAttribute="trailingMargin" id="Cbn-f2-87a"/>
                             <constraint firstItem="Oll-y1-Rwh" firstAttribute="leading" secondItem="du8-RI-0TI" secondAttribute="leadingMargin" id="DGv-cP-nwP"/>
+                            <constraint firstItem="EgV-hB-wam" firstAttribute="leading" secondItem="du8-RI-0TI" secondAttribute="leadingMargin" id="DI7-Fw-357"/>
                             <constraint firstItem="XCU-H5-Mrk" firstAttribute="top" secondItem="otz-zc-MuK" secondAttribute="bottom" id="Fr8-Fo-bfz"/>
                             <constraint firstItem="GzW-Pc-38i" firstAttribute="trailing" secondItem="du8-RI-0TI" secondAttribute="trailingMargin" id="G3r-wr-oYL"/>
                             <constraint firstItem="mCK-cq-Tcd" firstAttribute="top" secondItem="5C8-Yv-Qpf" secondAttribute="bottom" constant="5" id="I3F-zr-DL2"/>
@@ -215,6 +222,7 @@
                             <constraint firstItem="5C8-Yv-Qpf" firstAttribute="leading" secondItem="du8-RI-0TI" secondAttribute="leadingMargin" id="aH9-b1-1Ef"/>
                             <constraint firstItem="Oll-y1-Rwh" firstAttribute="trailing" secondItem="du8-RI-0TI" secondAttribute="trailingMargin" id="bKm-tT-ZuB"/>
                             <constraint firstItem="XCU-H5-Mrk" firstAttribute="leading" secondItem="du8-RI-0TI" secondAttribute="leadingMargin" id="chl-HW-do7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EgV-hB-wam" secondAttribute="trailing" id="dRE-6M-oQF"/>
                             <constraint firstItem="Oll-y1-Rwh" firstAttribute="top" secondItem="ddy-Ph-xGM" secondAttribute="bottom" constant="10" id="djB-O1-Ibp"/>
                             <constraint firstItem="GzW-Pc-38i" firstAttribute="trailing" secondItem="du8-RI-0TI" secondAttribute="trailingMargin" id="fQM-aO-E4F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ddy-Ph-xGM" secondAttribute="trailing" id="kYV-tg-E9n"/>
@@ -222,6 +230,7 @@
                             <constraint firstItem="ddy-Ph-xGM" firstAttribute="leading" secondItem="du8-RI-0TI" secondAttribute="leadingMargin" id="oFH-AD-FgD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="otz-zc-MuK" secondAttribute="trailing" id="oji-l7-TEX"/>
                             <constraint firstItem="mCK-cq-Tcd" firstAttribute="leading" secondItem="du8-RI-0TI" secondAttribute="leadingMargin" id="pwM-Sd-gqq"/>
+                            <constraint firstItem="YRX-bp-dcH" firstAttribute="top" secondItem="EgV-hB-wam" secondAttribute="bottom" constant="20" id="rHz-1X-NvP"/>
                             <constraint firstItem="j8S-3v-NYE" firstAttribute="trailing" secondItem="du8-RI-0TI" secondAttribute="trailingMargin" id="wEf-Qs-cWK"/>
                         </constraints>
                     </view>
@@ -229,6 +238,7 @@
                         <outlet property="categoryButton" destination="mCK-cq-Tcd" id="MT6-6e-Jt0"/>
                         <outlet property="contentsTextView" destination="GzW-Pc-38i" id="iEw-IM-feq"/>
                         <outlet property="datePicker" destination="XCU-H5-Mrk" id="JNd-zl-V43"/>
+                        <outlet property="errorMes" destination="EgV-hB-wam" id="HaV-Le-sUm"/>
                         <outlet property="titleTextField" destination="Oll-y1-Rwh" id="OCa-0C-EME"/>
                     </connections>
                 </viewController>

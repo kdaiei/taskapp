@@ -24,6 +24,7 @@ class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryName: UILabel!
     
+    // カテゴリ追加ボタンを選択時
     @IBAction func AddCategoryButton(sender: UIButton) {
         let alert = UIAlertController(title: "カテゴリ追加", message: "カテゴリを入力してください", preferredStyle: .Alert)
         
@@ -40,7 +41,7 @@ class CategoryViewController: UIViewController {
             }
             
             // データベースに保存
-            print(self.categoryStr)
+            //print(self.categoryStr)
             try! self.realm.write {
                 if self.categoryArray.count != 0 {
                     self.cate.id = self.categoryArray.max("id")! + 1
@@ -70,21 +71,30 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("viewDidLoad = \(categoryStr)")
+        // print("viewDidLoad = \(categoryStr)")
         if "" == categoryStr {
             categoryName.textColor = lightGray
         } else {
             categoryName.textColor = black
             categoryName.text = categoryStr
         }
+        
+        let leftButton = UIBarButtonItem(title: "＜ 戻る", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InputViewController.goBefore))
+        self.navigationItem.leftBarButtonItems = [leftButton]
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-    
+    // 戻るボタンを押下
+    func goBefore() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+
+ 
 
     // データの数（＝セルの数）を返すメソッド
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -131,8 +141,5 @@ class CategoryViewController: UIViewController {
             }
         }
     }
-    
-
-
     
 }

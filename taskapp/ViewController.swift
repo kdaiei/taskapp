@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         if "" != cateboryText {
             taskArray = try! Realm().objects(Task).filter("category == '\(cateboryText!)'").sorted(sortProperties)
         } else {
-            taskArray = try! Realm().objects(Task).sorted("date", ascending: false)
+            taskArray = try! Realm().objects(Task).sorted(sortProperties)
         }
         tableView.reloadData()
         //outFoucus()
@@ -124,7 +124,7 @@ class ViewController: UIViewController {
     
     // segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        dismissKeyboard()
+        //dismissKeyboard()
         let inputViewController:InputViewController = segue.destinationViewController as! InputViewController
         
         if segue.identifier == "cellSegue" {
